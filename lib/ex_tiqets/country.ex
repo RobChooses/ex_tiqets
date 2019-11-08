@@ -6,9 +6,10 @@ defmodule ExTiqets.Country do
   @doc """
   Get a single country
 
-  ## Example
-  iex> ExTiqets.Country.get(client, 400)
-  {:ok, response}
+  ## Example - The Netherlands (id: 50166)
+
+      iex> ExTiqets.Country.get(client, 50166)
+      {:ok, response}
 
   """
   def get(client, id) do
@@ -20,15 +21,17 @@ defmodule ExTiqets.Country do
   Get multiple countries
 
   ## Examples
-  iex> ExTiqets.Country.get_all(client)
-  {:ok, response}
 
-  iex> options = %{
-    page_size: 20,
-    page: 1
-  }
-  iex> ExTiqets.Country.get_all(client, options)
-  {:ok, response}
+      iex> ExTiqets.Country.get_all(client)
+      {:ok, response}
+
+      iex> options = %{
+             page_size: 20,
+             page: 1
+           }
+
+      iex> ExTiqets.Country.get_all(client, options)
+      {:ok, response}
 
   """
   def get_all(client) do

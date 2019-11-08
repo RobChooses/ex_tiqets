@@ -5,11 +5,12 @@ defmodule ExTiqets.Tag do
 
   @doc """
   Get tag types, such as:
-    "category", "recommended audience", "best time of day", "main category"
+  "category", "recommended audience", "best time of day", "main category"
 
   ## Example
-  iex> ExTiqets.Tag.get_types(client)
-  {:ok, response}
+
+      iex> ExTiqets.Tag.get_types(client)
+      {:ok, response}
 
   """
   def get_types(client) do
@@ -20,8 +21,9 @@ defmodule ExTiqets.Tag do
   Get a tag by id
 
   ## Example to retrieve Kids (400) tag type
-  iex> ExTiqets.Tag.get(client, 400)
-  {:ok, response}
+
+      iex> ExTiqets.Tag.get(client, 400)
+      {:ok, response}
 
   """
   def get(client, id) do
@@ -33,16 +35,18 @@ defmodule ExTiqets.Tag do
   Get all tags
 
   ## Examples
-  iex> ExTiqets.Tag.get_all(client)
-  {:ok, response}
 
-  iex> options = %{
-    page_size: 20,
-    page: 1,
-    type_name: "category""
-  }
-  iex> ExTiqets.Tag.get_all(client, options)
-  {:ok, response}
+      iex> ExTiqets.Tag.get_all(client)
+      {:ok, response}
+
+      iex> options = %{
+             page_size: 20,
+             page: 1,
+             type_name: "category""
+           }
+
+      iex> ExTiqets.Tag.get_all(client, options)
+      {:ok, response}
 
   """
   def get_all(client) do
