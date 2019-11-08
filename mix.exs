@@ -35,7 +35,7 @@ defmodule ExTiqets.MixProject do
 
   defp package do
     [
-      files: ["lib", "config", "mix.exs", "README", "LICENSE"],
+      files: ["lib", "config", "mix.exs", "README.md", "LICENSE"],
       maintainers: ["Rob Chu"],
       licenses: ["MIT"],
       links: %{"Github" => "https://github.com/RobChooses/ex_tiqets"}
