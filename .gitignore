@@ -22,3 +22,5 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 ex_tiqets-*.tar
 
+# Ignore for Dialyzer
+.elixir_ls/
