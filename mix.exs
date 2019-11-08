@@ -29,7 +29,7 @@ defmodule ExTiqets.MixProject do
 
   defp description do
     """
-    Elixir wrapper for the Tiqets V2 API]
+    Elixir wrapper for the Tiqets V2 API
     """
   end
 
