@@ -2,7 +2,7 @@ defmodule ExTiqetsTest do
   use ExUnit.Case
   doctest ExTiqets
 
-  test "greets the world" do
-    assert ExTiqets.hello() == :world
+  test "new tiqets client" do
+    assert %Tesla.Client{} = ExTiqets.client
   end
 end

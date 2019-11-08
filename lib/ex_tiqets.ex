@@ -8,11 +8,24 @@ defmodule ExTiqets do
   from `config.exs` or dynamically in runtime
 
   ## Examples
-      iex> client = ExTiqets.client
-      %Tesla.Client{ .. }
+      iex> ExTiqets.client
+      %Tesla.Client{
+        pre: [
+          {Tesla.Middleware.BaseUrl, :call, ["https://api.tiqets.com/v2"]},
+          {Tesla.Middleware.JSON, :call, [[]]},
+          {Tesla.Middleware.Query, :call, [[lang: "en", currency: "GBP"]]},
+          {Tesla.Middleware.Headers, :call, [[{"Authorization", "Token: API_KEY"}]]},
+          {Tesla.Middleware.PathParams, :call, [[]]}
+        ]}
 
-      iex> client = ExTiqets.client(%{api_key: "123456abcdef", language: "ru", currency: "GBP"})
-      %Tesla.Client{ .. }
+      iex> ExTiqets.client(%{api_key: "123456abcdef", language: "ru", currency: "GBP"})
+      %Tesla.Client{
+        pre: [{Tesla.Middleware.BaseUrl, :call, ["https://api.tiqets.com/v2"]},
+          {Tesla.Middleware.JSON, :call, [[]]},
+          {Tesla.Middleware.Query, :call, [[lang: "ru", currency: "GBP"]]},
+          {Tesla.Middleware.Headers, :call, [[{"Authorization", "Token: 123456abcdef"}]]},
+          {Tesla.Middleware.PathParams, :call, [[]]}
+        ]}
 
   Returns
   %Tesla.Client{}
