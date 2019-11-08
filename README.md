@@ -17,13 +17,18 @@ iex> options = {
   tag_id: 400,
   page_size: 20
 }
+
 iex> ExTiqets.Product.get_by_search_filter(client, options)
 {:ok, response}
 
-response.body # => 200
-response.status # => %{"pagination" => ..., "products" => [ ... ], ...}
+response.status # => 200
+response.body # => %{"pagination" => ..., "products" => [ ... ], ...}
 response.headers # => [{"content-type", "application/json" ...}]
 ```
+
+## Configuration
+
+The Tiqets `API_KEY`, default language and currency can be set in the `config.exs` file.
 
 ## Installation
 
