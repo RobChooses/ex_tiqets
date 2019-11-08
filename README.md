@@ -2,7 +2,7 @@
 
 Elixir wrapper for the [Tiqets V2 API](https://api.tiqets.com/v2/docs/#api-overview)
 
-Documentation can be found at [https://hexdocs.pm/ex_tiqets](https://hexdocs.pm/ex_tiqets).
+Documentation can be found at [https://hexdocs.pm/ex_tiqets](https://hexdocs.pm/ex_tiqets/api-reference.html).
 
 ## Usage
 
