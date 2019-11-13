@@ -14,11 +14,11 @@ iex> client = ExTiqets.client(%{api_key: TIQETS_API_KEY})
 
 Retrieve activities in NYC for Kids (id: 400)
 ```elixir
-iex> options = {
-  city_id: 260932,
-  tag_id: 400,
-  page_size: 20
-}
+iex> options = %{
+       city_id: 260932,
+       tag_id: 400,
+       page_size: 20
+     }
 
 iex> ExTiqets.Product.get_by_search_filter(client, options)
 {:ok, response}
